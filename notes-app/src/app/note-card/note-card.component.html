@@ -1,13 +1,20 @@
 <div #container class="note-card-container">
     
     <div class="note-card-content">
-        <h1 class="note-card-title">Lorem ipsum</h1>
+        <h1 class="note-card-title">
+             {{ title }} 
+                <!-- hello world -->
+        </h1>
+        <div #bodyText class="note-card-body">
+            <p>
+                 {{ body }} 
+                <!-- hfgrrkjcfkrjcflkej hfgrrkjcfkrjcflkej hfgrrkjcfkrjcflkej  hfgrrkjcfkrjcflkej hfgrrkjcfkrjcflkej hfgrrkjcfkrjcflkej     -->
 
-        <div class="note-card-body">
-            <p>*Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, vero. Eum quasi incidunt laborum vero harum perspiciatis nisi, explicabo sit ad quos magnam repudiandae ullam velit, temporibus sequi voluptas. Perspiciatis.</p>
-            <div class="fade-out-truncation"></div>
+            </p>
+            <div #truncator class="fade-out-truncation"></div>
 
         </div>
+        <div #data></div>
     </div>
     <div class="x-button"></div>
 </div>
