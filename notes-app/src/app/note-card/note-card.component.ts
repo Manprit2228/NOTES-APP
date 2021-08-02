@@ -9,7 +9,6 @@ import { Component, AfterViewInit ,ElementRef, OnInit, TestabilityRegistry, View
 export class NoteCardComponent implements OnInit {
 
   @Input('title') title: string
-  
   @Input('body') body: string
 
   // @Input() dataFromParent = 'QWERTY';

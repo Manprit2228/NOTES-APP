@@ -1,4 +1,6 @@
 @import '../../main-style.scss';
+
+
 .note-card-container {
     position: relative;
     background: white;
@@ -56,14 +58,14 @@
         width: 34px;
 
         background-color: $light-red;
-        background-image: url('../../assets/delete_icon.svg');
+        background-image: url('../../iconmonstr-x-mark-2.svg');
         background-repeat: no-repeat;
         background-position: center;
 
         border-radius: 4px;
         transition: opacity 0.2s ease-out, transform 0.2s ease-out;
         
-        //the utton is hidden by default
+        //the button is hidden by default
         opacity: 0;
         transform: scale(0.35);
         

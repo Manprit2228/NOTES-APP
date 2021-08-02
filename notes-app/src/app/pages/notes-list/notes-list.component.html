@@ -1,3 +1,4 @@
+
 <div class="main-container">
     
     <div class="search-bar-container">
@@ -14,8 +15,16 @@
     </div>
     <div class="notes-list">
       <!-- <app-note-card></app-note-card> -->
-       <app-note-card title="cardTitle" body="testing testing testing this is the body"></app-note-card> 
-      <app-note-card></app-note-card>
-      <app-note-card></app-note-card>
+      <!-- <app-note-card title="title" body="body"></app-note-card>  -->
+       <app-note-card 
+       *ngFor="let note of notes; index as i" 
+       [routerLink]="[i]"
+       [title]="note.title" 
+       [body]="note.body"
+     
+       ></app-note-card> 
+       
+      
     </div>
+    <button class="button floating-add-button is-primary" routerLink="new" >+ Add</button>
 </div>
