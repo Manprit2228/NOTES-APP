@@ -1,5 +1,6 @@
-import { Input, Renderer2 } from '@angular/core';
+import { EventEmitter, Input, Output, Renderer2 } from '@angular/core';
 import { Component, AfterViewInit ,ElementRef, OnInit, TestabilityRegistry, ViewChild } from '@angular/core';
+
 
 @Component({
   selector: 'app-note-card',
@@ -8,9 +9,12 @@ import { Component, AfterViewInit ,ElementRef, OnInit, TestabilityRegistry, View
 })
 export class NoteCardComponent implements OnInit {
 
-  @Input('title') title: string
-  @Input('body') body: string
+  @Input() title: string;
+  @Input() body: string;
+  @Input() link: string;
 
+  @Output('delete') deleteEvent: EventEmitter<void> = new EventEmitter<void>();
+ 
   // @Input() dataFromParent = 'QWERTY';
   // todoData: any = [];
 
@@ -36,6 +40,10 @@ export class NoteCardComponent implements OnInit {
       }
     }
 
+  onXButtonClick() {
+    this.deleteEvent.emit();
+
+  }
   }
 
 

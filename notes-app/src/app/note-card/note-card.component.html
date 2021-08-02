@@ -1,5 +1,5 @@
 <div #container class="note-card-container">
-    
+    <a routerLink="link">
     <div class="note-card-content">
         <h1 class="note-card-title">{{ title }} <!-- hello world --></h1>
         <div #bodyText class="note-card-body">
@@ -11,8 +11,9 @@
             <div #truncator class="fade-out-truncation"></div>
 
         </div>
-        <div #data></div>
-    </div>
-    <div class="x-button"></div>
+        </div>
+        </a>
+   
+    <div class="x-button" (click)="onXButtonClick()"></div>
 </div>
 
