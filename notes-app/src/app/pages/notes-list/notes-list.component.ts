@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Note } from 'src/app/shared/note.module';
 import { NotesService } from 'src/app/shared/notes.service';
 import { Route } from '@angular/router'
-import { animate, style, transition, trigger } from '@angular/animations';
+import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 import { transformAll } from '@angular/compiler/src/render3/r3_ast';
 
 @Component({
@@ -66,6 +66,21 @@ import { transformAll } from '@angular/compiler/src/render3/r3_ast';
           paddingLeft: 0,
           'margin-bottom': '0,'
         }))
+      ])
+    ]),
+    trigger('listAnim',[
+      transition('* => *', [
+        query(':enter', [
+          style({
+            opacity:0,
+            height: 0
+          }),
+          stagger(100, [
+            animate('0.2s ease')
+          ])
+        ], {
+          optional: true
+        })
       ])
     ])
   ]
