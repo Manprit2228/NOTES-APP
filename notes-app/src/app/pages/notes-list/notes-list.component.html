@@ -5,7 +5,7 @@
         <div class="field">
             <p class="control has-icons-left">
               <!-- <span class="iconify" data-icon="octicon:lock-16" data-inline="false"></span> -->
-              <input class="input" type="text" (keyup)="filter($any($event.target).value)" placeholder="Filter"> <!--change from google-->
+              <input  #filterInput class="input" type="text" (keyup)="filter($any($event.target).value)" placeholder="Filter"> <!--change from google-->
               <span class="icon is-small is-left">
                 <i class="fas fa-search"></i>
               </span> 
@@ -15,12 +15,13 @@
     </div>
     <div class="notes-list" [@listAnim]>
       <!-- <app-note-card></app-note-card> -->
-      <!-- <app-note-card title="title" body="body"></app-note-card>  -->
+      <!-- <app-note-card title="title" body="body"></app-note-card>  
+      below [routerLink] = "[i]" now changing-->
        <app-note-card 
-       *ngFor="let note of filteredNotes; index as i" 
-       [routerLink]="[i]"
+       *ngFor="let note of filteredNotes;" 
+       [routerLink]="[generateNoteURL(note)]"     
        [@itemAnim]
-       (delete)="deleteNote(i)"
+       (delete)="deleteNote(note)"
         [title]="note.title" 
        [body]="note.body"
      
