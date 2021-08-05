@@ -50,10 +50,13 @@ export class NoteDetailsComponent implements OnInit {
     // we should save the note
       this.notesService.add(form.value);
       this.router.navigateByUrl('/');
+      // localStorage.setItem("note",JSON.stringify(this.note))
     } else{      
       this.notesService.update(this.noteId, form.value.title, form.value.body);
       this.router.navigateByUrl('/');
+      // localStorage.setItem("note",JSON.stringify(this.note))
     }
+    
     
    
     

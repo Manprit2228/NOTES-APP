@@ -90,17 +90,29 @@ const _getKeyValue_ = (key: string) => (obj: Record<string, any>) => obj[key];
 
 
 export class NotesListComponent implements OnInit {
+
   // @Input() routerLink: any;
+  localItem : any;
+
+   notes: Note[] = new Array<Note>();
+ 
   
-
-  notes: Note[] = new Array<Note>();
-
+ 
   filteredNotes: Note[] = new Array<Note>();
   // cardTitle: string = 'abc';
 
   @ViewChild('filterInput') filterInputElRef: ElementRef<HTMLInputElement>
   
-  constructor(private notesService: NotesService) { }
+  constructor(private notesService: NotesService) {
+    // this.localItem = localStorage.getItem("notes");
+    // if(this.localItem=== null){
+    //     this.notes=[];
+
+    // }
+    // else{
+    //   this.notes=JSON.parse(this.localItem);
+    // }
+   }
 
   ngOnInit(): void {
     // we want to retrieve all notes from service
@@ -113,12 +125,13 @@ export class NotesListComponent implements OnInit {
    let noteId = this.notesService.getId(note);
    this.notesService.delete(noteId);
    this.filter(this.filterInputElRef.nativeElement.value);
+    
 
-}
-
+  }
   generateNoteURL(note: Note) {
     let noteId = this.notesService.getId(note);
     return noteId;
+   
   }
 
 filter(query: string) {
