@@ -54,11 +54,12 @@
         top: 12px;
         right: 12px;
         //12px from the right side 
-        height: 34px;
-        width: 34px;
+        height: 30px;
+        width: 30px;
 
-        background-color: $light-red;
-        background-image: url('../../iconmonstr-x-mark-2.svg');
+        // background-color: $light-red;
+        background-color: #979797;
+        background-image: url('../../iconmonstr-x-mark-8.svg');
         background-repeat: no-repeat;
         background-position: center;
 
@@ -70,10 +71,10 @@
         transform: scale(0.35);
         
         &:hover {
-            background-color: darken($light-red, 3%);
+            background-color: darken(#979797, 3%);
         } 
         &:active {
-            background-color: darken($light-red, 4%);
+            background-color: darken(#979797, 6%);
         }
     }
 }

@@ -130,6 +130,7 @@ export class NotesListComponent implements OnInit {
   }
   generateNoteURL(note: Note) {
     let noteId = this.notesService.getId(note);
+    console.log(noteId);
     return noteId;
    
   }
