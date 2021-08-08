@@ -10,10 +10,10 @@
 // #708090	(112,128,144)
 // #536878	(83,104,120)
 // #36454f
-$add:#979797; 
-$leftmost: #525252;
-$midcolor:#AEAEAE;
-$rightmost:#696969;
+$add:#ffb6c1; 
+$leftmost: #dd5e89;
+$midcolor:#ffb6c1;
+$rightmost: #f7bb97;
 $light-blue: #73A5C6;
 $light: #FFFFFFFF;
 
@@ -23,7 +23,7 @@ $family-sans-serif: "Nunito", sans-serif;
 $primary: $add;
 $link: $rightmost;
 // $green: #0bf387;
-$green:#696969;
+$green:#dd5e89;
 // Update some of Bulma's component variables
 $body-background-color: $light;
 $control-border-width: 2px;
