@@ -132,8 +132,8 @@ export class NotesListComponent implements OnInit {
     let noteId = this.notesService.getId(note);
     console.log(noteId);
     return noteId;
-   
   }
+
 
 filter(query: string) {
   query = query.toLowerCase().trim();
